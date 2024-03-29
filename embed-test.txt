@@ -1,0 +1,6 @@
+embed test
+
+<embed>
+text file
+<embed>
+video file
