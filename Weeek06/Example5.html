@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <title>그룹핑 예제</title> 
+</head>
+<body>
+    <h3>레스토랑 예약하기</h3>
+    <form method="post" action="form_app.js"> 
+        <fieldset>
+            <legend>예약자 정보</legend>
+            <label for="user_person">예약자:</label>
+            <input type="text" name="person" size="20" id="user_person"><br>
+            <label for="user_Number">연락처:</label>
+            <input type="text" name="Number" size="20" id="user_Number"><br>
+            <label for="participants">예약 인원:</label>
+            <select name="participants" id="participants">
+                <option value="one" selected>1명</option>
+                <option value="two">2명</option>
+                <option value="three">3명</option>
+                <option value="four">4명</option>
+                <option value="others">기타</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>일자 선택 및 시간 선택</legend>
+            <label for="last_date">날짜:</label>
+            <input type="date" name="last_date" id="last_date" min="2013-01-30">
+            <input type="time" name="time_from" id="time_from" min="09:00" max="18:00">
+        </fieldset>
+        <input type="submit" value="확인">
+        <input type="reset" value="취소">
+    </form>
+</body>
+</html>

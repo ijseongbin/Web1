@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <title>FORM 입력 예제</title> 
+</head>
+<body>
+    <h3>수강 과목 조사</h3>
+    <form method="get" action="form_app.js">
+        이름: <input type="text" name="name"> <br>
+        학과: <input type="text" name="department"> <br>
+        학년: 
+        <select name="grade">
+            <option value="one">1학년</option>
+            <option value="two">2학년</option>
+            <option value="three">3학년</option>
+            <option value="four">4학년 이상</option>
+        </select><br>
+        <p>
+            &nbsp; 수강 과목(중복 선택 가능):
+        <select name="course" size="3" multiple>
+            <option value="Understanding of IT Technology">IT 기술의 이해</option>
+            <option value="Basic Web Programming">웹 프로그래밍기초</option>
+            <option value="UI/UX Design">UI/UX설계</option>
+        </select><br><br>
+        <input type="submit" value="확인">
+        <input type="reset" value="취소">
+    </form>
+</body>
+</html>
