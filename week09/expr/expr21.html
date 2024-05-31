@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draw Table</title>
+</head>
+<body>
+    <h1>행과 열 수에 따른 표 그리기</h1>
+    <button onclick="drawTable()">표 그리기</button>
+    <br>
+    <div id="tableContainer"></div>
+
+    <script>
+        function drawTable() {
+
+            rows = parseInt(prompt("행 수를 입력하세요:"));
+            columns = parseInt(prompt("열 수를 입력하세요:"));
+
+            function generateTable(rows, columns) {
+                table = "<table border='1'>";
+                for (i = 0; i < rows; i++) {
+                    table += "<tr>";
+                    for (j = 0; j < columns; j++) {
+                        table += "<td>행 " + (i+1) + ", 열 " + (j+1) + "</td>";
+                    }
+                    table += "</tr>";
+                }
+                table += "</table>";
+                return table;
+            }
+
+            document.getElementById("tableContainer").innerHTML = generateTable(rows, columns);
+        }
+    </script>
+</body>
+</html>

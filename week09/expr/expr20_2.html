@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translate Day</title>
+</head>
+<body>
+    <h1>요일 번역기(switch)</h1>
+    <label for="dayInput">요일을 입력하세요 : </label>
+    <input type="text" id="dayInput">
+    <button onclick="translateDay()">번역</button>
+    <p id="translationResult"></p>
+
+    <script>
+        function translateDayWithSwitch(day) {
+            let translatedDay;
+            switch (day) {
+                case "월요일":
+                    translatedDay = "Monday";
+                    break;
+                case "화요일":
+                    translatedDay = "Tuesday";
+                    break;
+                case "수요일":
+                    translatedDay = "Wednesday";
+                    break;
+                case "목요일":
+                    translatedDay = "Thursday";
+                    break;
+                case "금요일":
+                    translatedDay = "Friday";
+                    break;
+                case "토요일":
+                    translatedDay = "Saturday";
+                    break;
+                case "일요일":
+                    translatedDay = "Sunday";
+                    break;
+                default:
+                    translatedDay = "해당하는 요일이 없습니다.";
+            }
+            return translatedDay;
+        }
+
+        function translateDay() {
+            let dayInput = document.getElementById("dayInput").value;
+            let translationResult = translateDayWithSwitch(dayInput);
+            document.getElementById("translationResult").textContent = translationResult;
+        }
+    </script>
+</body>
+</html>

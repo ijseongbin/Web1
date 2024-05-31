@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of Multiples of 3</title>
+</head>
+<body>
+    <h1>1부터 1000까지의 모든 3의 배수의 합</h1>
+    <p id="result"></p>
+
+    <script>
+        // while
+        sumWhile = 0;
+        numWhile = 1;
+        while (numWhile <= 1000) {
+            if (numWhile % 3 === 0) {
+                sumWhile += numWhile;
+            }
+            numWhile++;
+        }
+        document.getElementById("result").innerHTML += "while 반복문을 사용한 결과: " + sumWhile + "<br>";
+
+    </script>
+</body>
+</html>
+
