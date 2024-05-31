@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ex25</title>
+  <style>
+    #log {
+      border: 1px solid #000;
+      height: 1000px;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="myButton">이벤트 처리 버튼</button>
+  <div id="log"></div>
+
+  <script>
+    const button = document.getElementById('myButton');
+    const logDiv = document.getElementById('log');
+
+    function logEvent(event) {
+      const eventName = event.type;
+      logDiv.textContent += `Event: ${eventName}, `;
+      
+    }
+
+    const events = [
+        'click', 'mousedown', 'mouseup', 'mouseover', 'mouseout'
+    ];
+
+    for ( i = 0; i < events.length; i++) {
+      button.addEventListener(events[i], logEvent);
+    }
+  </script>
+
+</body>
+</html>

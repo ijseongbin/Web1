@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>타이머</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var stopped = true;
+        
+        function start() {
+            var dom = document.getElementById("sec");
+            var time = parseInt(dom.value);
+            if (time > 0) {
+                dom.value = time - 1;
+                if (!stopped) setTimeout(start, 1000);
+            }
+        }
+    </script>
+
+    <h2>Timer</h2>
+    <form action="">
+        <input type="button" value="Start" onclick="stopped=false; setTimeout(start, 1000);" />
+        <input type="button" value="Stop" onclick="stopped=true;" />
+        <input type="reset" value="Reset" onclick="stopped=true; document.getElementById('sec').value='0';" /> <br><br>
+
+        <input id="sec" type="text" value="0" size="2"/> seconds
+    </form>
+</body>
+</html>

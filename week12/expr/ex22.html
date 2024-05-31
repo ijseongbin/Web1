@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>ex22</title>
+    <script type="text/javascript">
+        function changeButtonValue() {
+            var inputValue = prompt("버튼 이름을 입력하세요:");
+            document.getElementById("myButton").value = inputValue;
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <input type="button" id="myButton" value="" onclick="changeButtonValue();"/>
+    </form>
+</body>
+</html>

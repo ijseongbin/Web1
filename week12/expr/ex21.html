@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ex21</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+
+    </head>
+
+    <body>
+        <h3><strong>배경색 변경</strong></h3>
+    <div>
+        <button id="blueButton">파란색 배경</button>
+        <button id="redButton">붉은색 배경</button>
+    </div>
+
+    <script>
+        // 파란색
+        document.getElementById('blueButton').addEventListener('click', function() {
+        document.body.style.backgroundColor = 'blue';
+        });
+
+        // 붉은색
+        document.getElementById('redButton').addEventListener('click', function() {
+        document.body.style.backgroundColor = 'red';
+        });
+    </script>
+
+    </body>
+</html>
