@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getTime 메서드를 이용한 오늘의 날짜와 시간</title>
+</head>
+<body>
+    <h1>getTime 메서드로 오늘의 날짜와 시간</h1>
+    <p id="datetime"></p>
+
+    <script>
+        var currentTime = new Date().getTime();
+
+        
+        var currentDate = new Date(currentTime);
+
+        var year = currentDate.getFullYear();
+        var month = currentDate.getMonth() + 1; 
+        var day = currentDate.getDate();
+        var hours = currentDate.getHours();
+        var minutes = currentDate.getMinutes();
+        var seconds = currentDate.getSeconds();
+
+        var datetimeStr = year + "년 " + month + "월 " + day + "일 " + hours + "시 " + minutes + "분 " + seconds + "초";
+
+        document.getElementById("datetime").textContent = "현재 시간: " + datetimeStr;
+    </script>
+</body>
+</html>

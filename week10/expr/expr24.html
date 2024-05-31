@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오름차순 내림차순 배열</title>
+</head>
+<body>
+    <h1>오름차순 내림차순 정렬</h1>
+    <p>정렬할 단어의 개수를 입력하세요:</p>
+    <input type="number" id="wordCountInput">
+    <button onclick="startInput()">단어 입력</button>
+    <div id="wordInputs"></div>
+    <button onclick="sortWords()">정렬하기</button>
+    <div id="output"></div>
+
+    <script>
+        var wordCount; 
+        var words = []; 
+
+        function startInput() {
+            wordCount = parseInt(document.getElementById("wordCountInput").value);
+            var wordInputsDiv = document.getElementById("wordInputs");
+            wordInputsDiv.innerHTML = ""; //초기화
+
+            for (var i = 0; i < wordCount; i++) {
+                var input = document.createElement("input");
+                input.type = "text";
+                input.id = "wordInput" + i;
+                wordInputsDiv.appendChild(input);
+            }
+        }
+
+        function sortWords() {
+            words = []; // 배열 초기화
+
+            for (var i = 0; i < wordCount; i++) {
+                var input = document.getElementById("wordInput" + i).value.trim();
+                if (input !== "") { // 빈 문자열이 아닐때 추가
+                    words.push(input);
+                }
+            }
+
+            // 정렬
+            var ascendingOrder = words.slice().sort();
+            var descendingOrder = words.slice().sort().reverse();
+
+            // 출력
+            var outputDiv = document.getElementById("output");
+            outputDiv.innerHTML = "<p>오름차순: " + ascendingOrder.join(", ") + "</p>";
+            outputDiv.innerHTML += "<p>내림차순: " + descendingOrder.join(", ") + "</p>";
+        }
+    </script>
+</body>
+</html>
