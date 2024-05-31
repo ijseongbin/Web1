@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>expr16</title>
+</head>
+<body>
+    <h3><Strong>버튼을 누르면 버튼의 숫자값이 1씩 증가</Strong></h3>
+    <div id="button_area">
+        <input type="button" value="1"/>
+        <input type="button" value="2"/>
+        <input type="button" value="3"/>
+    </div>
+
+    <script>
+        
+        function incrementButtonValue(button) {
+            var value = parseInt(button.value);
+            value++;
+            button.value = value.toString(); 
+        }
+
+        var buttons = document.querySelectorAll('#button_area input[type="button"]');
+        buttons.forEach(function(button) {
+            button.addEventListener('click', function() {
+                incrementButtonValue(this);
+            });
+        });
+    </script>
+</body>
+</html>

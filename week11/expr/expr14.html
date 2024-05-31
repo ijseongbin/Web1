@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>expr14</title>
+    <style>
+        .block-button {
+            display: block;
+            margin-bottom: 10px;
+            background-color: skyblue; 
+            color: white; 
+            border: none; 
+            padding: 10px; 
+            cursor: pointer; 
+        }
+    </style>
+</head>
+<body>
+    <H3><Strong>input요소 형태로 버튼 두개를 생성해 div요소에 삽입</Strong></H3>
+    <div id="button_area"></div>
+
+    <script>
+        function insertButtons() {
+        
+            var buttonArea = document.getElementById('button_area');
+
+            var button1 = document.createElement('input');
+            button1.type = 'button';
+            button1.value = '자바스크립트에 의해서 동적으로 생성 및 삽입되었음(1)';
+            button1.className = 'block-button';
+            
+            var button2 = document.createElement('input');
+            button2.type = 'button';
+            button2.value = '자바스크립트에 의해서 동적으로 생성 및 삽입되었음(2)';
+            button2.className = 'block-button';
+
+            buttonArea.appendChild(button1);
+            buttonArea.appendChild(button2);
+        }
+        insertButtons();
+    </script>
+</body>
+</html>
